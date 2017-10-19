@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+
+		#box{width: 710px; margin: 0 auto }
+		td{ text-align: center; width:100px; height: 100px;}
+		td:nth-child(1){text-align: center; width: 150px; height: 20px;}
+		td:nth-child(1)>input{ width: 20px; height: 20px; }
+		td:nth-child(2) { width: 150px;}
+		td:nth-child(2) img{ width: 100px; height: 70px; }
+		td:nth-child(4) input{ width: 40px; text-align: center;}
+		.add{ margin-left: 10px; color: blue;}
+		.add:hover{ cursor:pointer; }
+		.sub{ margin-right: 10px;}
+		.sub:hover{ cursor:pointer; }
+		p{ margin-top:10px; }
+		.b1,.b2{ color:red; padding: 0 10px;}
+		#imgss { margin-top: 20px;}
+		#imgss>div{ position: relative; float: left; margin-right: 10px;}
+		#imgss img{ width: 100px;}
+		#imgss div .close{ display: none;}
+		#imgss div:hover .close{
+			display:block;
+			position: absolute;
+			right: -10px;
+			top: -10px;
+			background: red;
+			border-radius: 50%;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<div id="box">
+	<table id="table" border="1" width="700"  cellspacing="1">
+		<tr>
+		   <td><input type="checkbox" id="xAll">全选/全不选</input></td>
+		   <td>商品(海报)</td>
+		   <td>单价/元</td>
+		   <td>数量/件</td>
+		   <td>小计/元</td>
+		   <td>操作</td>
+		</tr>
+		<tr>
+		   <td><input type="checkbox" class="cks"></input></td>
+		   <td><img src="imgs/1.jpg"></td>
+		   <td>20.2</td>
+		   <td><span class="sub">-</span><input type="text" value="1"><span class="add">+</span></td>
+		   <td>20.2</td>
+		   <td><button>删除</button></td>
+		</tr>
+		<tr>
+		   <td><input type="checkbox" class="cks"></input></td>
+		   <td><img src="imgs/2.jpg"></td>
+		   <td>30.3</td>
+		   <td><span class="sub">-</span><input type="text" value="1"><span class="add">+</span></td>
+		   <td>30.3</td>
+		   <td><button>删除</button></td>
+		</tr>
+		<tr>
+		   <td><input type="checkbox" class="cks"></input></td>
+		   <td><img src="imgs/3.jpg"></td>
+		   <td>40.4</td>
+		   <td><span class="sub">-</span><input type="text" value="1"><span class="add">+</span></td>
+		   <td>40.4</td>
+		   <td><button>删除</button></td>
+		</tr>
+		<tr>
+		   <td><input type="checkbox" class="cks"></input></td>
+		   <td><img src="imgs/4.jpg"></td>
+		   <td>50.5</td>
+		   <td><span class="sub">-</span><input type="text" value="1"><span class="add">+</span></td>
+		   <td>50.5</td>
+		   <td><button>删除</button></td>
+		</tr>
+	</table>
+	<p id="count">已选购<b class="b1">0</b>件商品</p>
+	<p id="price">所选商品总价:￥<b class="b2">0</b></p>
+
+	<div id="imgss"></div>
+</div>
+
+	<script src="js1.js"></script>
+</body>
+</html>
